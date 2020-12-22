@@ -1,0 +1,20 @@
+!Job
+target: !Target
+  head: 8e6184325efa5c61818d5a0eb51ffe8d975cce89
+  email: travis@example.org
+  branch: githubactions
+  remote: https://github.com/projjal/arrow
+  version: 0.16.0.dev2942
+  no_rc_version: 0.16.0.dev2942
+  no_rc_semver_version: 0.16.0-dev2942
+tasks:
+  gandiva-jar-ubuntu: !Task
+    ci: github
+    template: gandiva-jars/github.linux.yml
+    artifacts:
+    - arrow-gandiva-0.16.0.dev2942-SNAPSHOT.jar
+    params: {}
+    branch: nightly-613-github-gandiva-jar-ubuntu
+    commit: 4b53d349916cd343f2c2800a0e60e9d665dab265
+params: {}
+branch: nightly-613
