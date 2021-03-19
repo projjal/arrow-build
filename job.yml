@@ -1,0 +1,28 @@
+!Job
+target: !Target
+  head: 7ebf572c6fc1180c98adfa212ad7bc5c5598b227
+  email: travis@example.org
+  branch: feature/add-trigonometry-functions
+  remote: https://github.com/s1mbi0se/arrow
+  version: 3.1.0.dev411
+  no_rc_version: 3.1.0.dev411
+  no_rc_semver_version: 3.1.0-dev411
+tasks:
+  gandiva-jar-osx: !Task
+    ci: github
+    template: gandiva-jars/github.osx.yml
+    artifacts:
+    - arrow-gandiva-3.1.0.dev411-SNAPSHOT.jar
+    params: {}
+    branch: nightly-646-github-gandiva-jar-osx
+    commit: b00e08b3141a0abf9e94c8b3571f7dfda028ceb0
+  gandiva-jar-ubuntu: !Task
+    ci: github
+    template: gandiva-jars/github.linux.yml
+    artifacts:
+    - arrow-gandiva-3.1.0.dev411-SNAPSHOT.jar
+    params: {}
+    branch: nightly-646-github-gandiva-jar-ubuntu
+    commit: 7484e4020de59685481b9f3806c9c162cd4f72d7
+params: {}
+branch: nightly-646
