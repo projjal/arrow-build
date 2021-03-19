@@ -1,0 +1,28 @@
+!Job
+target: !Target
+  head: 9a5fa57d61dfc9836afd36bf620bded5e842dbc3
+  email: travis@example.org
+  branch: feature/add-float-double-decimal-in-expr
+  remote: https://github.com/s1mbi0se/arrow
+  version: 3.1.0.dev401
+  no_rc_version: 3.1.0.dev401
+  no_rc_semver_version: 3.1.0-dev401
+tasks:
+  gandiva-jar-osx: !Task
+    ci: github
+    template: gandiva-jars/github.osx.yml
+    artifacts:
+    - arrow-gandiva-3.1.0.dev401-SNAPSHOT.jar
+    params: {}
+    branch: nightly-648-github-gandiva-jar-osx
+    commit: e10f53279d03dc3661a547d4caa7cc43193f9bc1
+  gandiva-jar-ubuntu: !Task
+    ci: github
+    template: gandiva-jars/github.linux.yml
+    artifacts:
+    - arrow-gandiva-3.1.0.dev401-SNAPSHOT.jar
+    params: {}
+    branch: nightly-648-github-gandiva-jar-ubuntu
+    commit: 043714b897fb0d3ba9c048d2a42e66cf6a824a49
+params: {}
+branch: nightly-648
