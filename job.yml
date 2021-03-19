@@ -1,0 +1,28 @@
+!Job
+target: !Target
+  head: d2d41d21c9df3c3113007d55e8b902cb7bbf4e8e
+  email: travis@example.org
+  branch: feature/add-last-day-function
+  remote: https://github.com/s1mbi0se/arrow
+  version: 3.1.0.dev406
+  no_rc_version: 3.1.0.dev406
+  no_rc_semver_version: 3.1.0-dev406
+tasks:
+  gandiva-jar-ubuntu: !Task
+    ci: github
+    template: gandiva-jars/github.linux.yml
+    artifacts:
+    - arrow-gandiva-3.1.0.dev406-SNAPSHOT.jar
+    params: {}
+    branch: nightly-647-github-gandiva-jar-ubuntu
+    commit: 083f36ca7a6b297f42550b82361c1bc8081aaeeb
+  gandiva-jar-osx: !Task
+    ci: github
+    template: gandiva-jars/github.osx.yml
+    artifacts:
+    - arrow-gandiva-3.1.0.dev406-SNAPSHOT.jar
+    params: {}
+    branch: nightly-647-github-gandiva-jar-osx
+    commit: 1b9d18f4dfe8a4d658b0cd4bd092267cfc0697ef
+params: {}
+branch: nightly-647
