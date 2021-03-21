@@ -1,0 +1,28 @@
+!Job
+target: !Target
+  head: cb5270e0f9bf962807ca6cda422567deba7d2593
+  email: travis@example.org
+  branch: symbiosis_regression
+  remote: https://github.com/projjal/arrow
+  version: 0.16.0.dev3647
+  no_rc_version: 0.16.0.dev3647
+  no_rc_semver_version: 0.16.0-dev3647
+tasks:
+  gandiva-jar-ubuntu: !Task
+    ci: github
+    template: gandiva-jars/github.linux.yml
+    artifacts:
+    - arrow-gandiva-0.16.0.dev3647-SNAPSHOT.jar
+    params: {}
+    branch: nightly-654-github-gandiva-jar-ubuntu
+    commit: d7491b8eacfa2c80d45a00c901742e5b08215bd2
+  gandiva-jar-osx: !Task
+    ci: github
+    template: gandiva-jars/github.osx.yml
+    artifacts:
+    - arrow-gandiva-0.16.0.dev3647-SNAPSHOT.jar
+    params: {}
+    branch: nightly-654-github-gandiva-jar-osx
+    commit: 9ad09e5d19c5aee27fb9203b09a9fabc151b0bc7
+params: {}
+branch: nightly-654
