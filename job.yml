@@ -1,0 +1,28 @@
+!Job
+target: !Target
+  head: 3fb7a85d8e48361422f24a349a04af87e5d7c8b4
+  email: travis@example.org
+  branch: simbiose_gandiva_fns_test_2
+  remote: https://github.com/projjal/arrow
+  version: 0.16.0.dev3498
+  no_rc_version: 0.16.0.dev3498
+  no_rc_semver_version: 0.16.0-dev3498
+tasks:
+  gandiva-jar-ubuntu: !Task
+    ci: github
+    template: gandiva-jars/github.linux.yml
+    artifacts:
+    - arrow-gandiva-0.16.0.dev3498-SNAPSHOT.jar
+    params: {}
+    branch: nightly-678-github-gandiva-jar-ubuntu
+    commit: f0f8e42bb2ad0517c958827af3506f491a0c63d9
+  gandiva-jar-osx: !Task
+    ci: github
+    template: gandiva-jars/github.osx.yml
+    artifacts:
+    - arrow-gandiva-0.16.0.dev3498-SNAPSHOT.jar
+    params: {}
+    branch: nightly-678-github-gandiva-jar-osx
+    commit: 56bea43366e51574f1796591c8180574d28b1fa7
+params: {}
+branch: nightly-678
