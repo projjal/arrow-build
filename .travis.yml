@@ -2,7 +2,7 @@ branches:
   except:
   - "/.*win.*/"
 os: linux
-dist: trusty
+dist: bionic
 language: generic
 before_install:
 - echo `pwd`
@@ -24,16 +24,16 @@ before_install:
 install:
 - |
   conda install -y \
-    jinja2 \
-    pygit2 \
     click \
+    github3.py \
+    jinja2 \
     jira \
-    toolz \
+    pygit2 \
     ruamel.yaml \
     setuptools_scm \
-    github3.py \
-    python-gnupg
+    toolz
 script:
 - pushd ..
-- git clone -b master https://github.com/apache/arrow
-- python arrow/dev/tasks/crossbow.py --queue-path $TRAVIS_BUILD_DIR --queue-remote https://github.com/$TRAVIS_REPO_SLUG submit --job-prefix nightly -g gandiva
+- git clone -b rel-1700 https://github.com/projjal/arrow
+- pip install -e arrow/dev/archery[crossbow] 
+- archery crossbow --queue-path $TRAVIS_BUILD_DIR --queue-remote https://github.com/$TRAVIS_REPO_SLUG submit java-jars --job-prefix nightly
