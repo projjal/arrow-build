@@ -1,0 +1,58 @@
+!Job
+target: !Target
+  head: d54b73ddfc7f10939abc8565f4ee2c608b1a30a5
+  email: travis@example.org
+  branch: rel-1700
+  remote: https://github.com/projjal/arrow
+  version: 0.16.0.dev4228
+  no_rc_version: 0.16.0.dev4228
+  no_rc_semver_version: 0.16.0-dev4228
+tasks:
+  java-jars: !Task
+    ci: github
+    template: java-jars/github.yml
+    artifacts:
+    - arrow-algorithm-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-algorithm-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-avro-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-avro-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-compression-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-compression-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-dataset-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-dataset-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-format-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-format-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-gandiva-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-gandiva-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-jdbc-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-jdbc-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-memory-core-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-memory-core-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-memory-netty-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-memory-netty-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-memory-unsafe-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-memory-unsafe-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-orc-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-orc-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-performance-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-performance-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-plasma-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-plasma-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-tools-0.16.0.dev4228-SNAPSHOT-jar-with-dependencies.jar
+    - arrow-tools-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-tools-0.16.0.dev4228-SNAPSHOT.jar
+    - arrow-vector-0.16.0.dev4228-SNAPSHOT-shade-format-flatbuffers.jar
+    - arrow-vector-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - arrow-vector-0.16.0.dev4228-SNAPSHOT.jar
+    - benchmarks.jar
+    - flight-core-0.16.0.dev4228-SNAPSHOT-jar-with-dependencies.jar
+    - flight-core-0.16.0.dev4228-SNAPSHOT-shaded-ext.jar
+    - flight-core-0.16.0.dev4228-SNAPSHOT-shaded.jar
+    - flight-core-0.16.0.dev4228-SNAPSHOT-tests.jar
+    - flight-core-0.16.0.dev4228-SNAPSHOT.jar
+    - flight-grpc-0.16.0.dev4228-SNAPSHOT-tests.jar
+    params: {}
+    branch: nightly-703-github-java-jars
+    commit: fbe20b7e24fdd5a3ba28375923db431687532745
+params: {}
+branch: nightly-703
