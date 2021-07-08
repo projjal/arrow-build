@@ -1,0 +1,58 @@
+!Job
+target: !Target
+  head: e6f92b3ab8ec3f201db7dfc337f8e92132b863fd
+  email: travis@example.org
+  branch: rel-1800
+  remote: https://github.com/projjal/arrow
+  version: 1.15.0.dev4338
+  no_rc_version: 1.15.0.dev4338
+  no_rc_semver_version: 1.15.0-dev4338
+tasks:
+  java-jars: !Task
+    ci: github
+    template: java-jars/github.yml
+    artifacts:
+    - arrow-algorithm-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-algorithm-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-avro-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-avro-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-compression-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-compression-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-dataset-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-dataset-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-format-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-format-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-gandiva-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-gandiva-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-jdbc-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-jdbc-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-memory-core-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-memory-core-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-memory-netty-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-memory-netty-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-memory-unsafe-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-memory-unsafe-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-orc-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-orc-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-performance-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-performance-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-plasma-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-plasma-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-tools-1.15.0.dev4338-SNAPSHOT-jar-with-dependencies.jar
+    - arrow-tools-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-tools-1.15.0.dev4338-SNAPSHOT.jar
+    - arrow-vector-1.15.0.dev4338-SNAPSHOT-shade-format-flatbuffers.jar
+    - arrow-vector-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - arrow-vector-1.15.0.dev4338-SNAPSHOT.jar
+    - benchmarks.jar
+    - flight-core-1.15.0.dev4338-SNAPSHOT-jar-with-dependencies.jar
+    - flight-core-1.15.0.dev4338-SNAPSHOT-shaded-ext.jar
+    - flight-core-1.15.0.dev4338-SNAPSHOT-shaded.jar
+    - flight-core-1.15.0.dev4338-SNAPSHOT-tests.jar
+    - flight-core-1.15.0.dev4338-SNAPSHOT.jar
+    - flight-grpc-1.15.0.dev4338-SNAPSHOT-tests.jar
+    params: {}
+    branch: nightly-706-github-java-jars
+    commit: 725542ea6db6ea7f2c40a00b3444391586b2356b
+params: {}
+branch: nightly-706
